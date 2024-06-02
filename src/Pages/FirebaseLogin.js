@@ -48,6 +48,7 @@ const FirebaseAuth = () => {
             value={email}
             onChange={handleEmailChange}
             required
+            placeholder="Email"
           />
           <Password
             label="Password:"

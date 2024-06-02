@@ -10,24 +10,10 @@ import FirebaseLogin from "./Pages/FirebaseLogin";
 import FirebaseSignup from "./Pages/FirebaseSignup";
 import ResetPassword from "./Pages/ResetPassword";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import TabBar from "./Components/TabBar";
+import Loading from "./Components/Loading";
+import "./firebase";
 
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGE_ID,
-  appId: process.env.REACT_APP_APP_ID,
-  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// eslint-disable-next-line
-const analytics = getAnalytics(app);
 const auth = getAuth();
 
 function App() {
@@ -37,23 +23,38 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
-      setLoading(false); // Once authentication state is checked, set loading to false
+
+      //slow down the loading screen to let users register it is a loading screen.
+      setTimeout(() => {
+        setLoading(false); // Once authentication state is checked, set loading to false
+      }, 250);
     });
     return () => unsubscribe();
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Show loading indicator while checking authentication
+    return (
+      <div>
+        <Loading />
+      </div>
+    ); // Show loading indicator while checking authentication
   }
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={user ? <Home /> : <Navigate to="/login" />} />
-        <Route path="/login" element={<FirebaseLogin />} />
+        <Route
+          path="/"
+          element={user ? <Home user={user} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/login"
+          element={user ? <Navigate to="/" /> : <FirebaseLogin />}
+        />
         <Route path="/signup" element={<FirebaseSignup />} />
         <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
+      {user && <TabBar />}
     </Router>
   );
 }

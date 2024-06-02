@@ -19,7 +19,6 @@ function Home({ user }) {
     <div>
       <h1>Welcome, {user.displayName || user.email}!</h1>
       <button onClick={handleLogout}>Logout</button>
-      {/* Add more user-specific content here */}
     </div>
   );
 }

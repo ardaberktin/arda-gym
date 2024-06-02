@@ -52,6 +52,7 @@ const Signup = () => {
             value={email}
             onChange={handleEmailChange}
             required
+            placeholder="Email"
           />
           <Password visible={false} />
           <Password

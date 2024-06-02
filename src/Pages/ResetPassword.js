@@ -41,6 +41,7 @@ const ResetPassword = () => {
             value={email}
             onChange={handleEmailChange}
             required
+            placeholder="Email"
           />
           <Password visible={false} />
           <Submit onClick={handleResetPassword}>Send Reset Email</Submit>
