@@ -1,17 +1,18 @@
 import React from "react";
 import SyncIcon from "@mui/icons-material/Sync";
-import "./Loading.css";
+import "./LoadingScreen.css";
 
-function Loading() {
+function LoadingScreen(props) {
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={SyncIcon} className="App-logo" alt="logo" /> */}
         <SyncIcon className="App-logo" alt="logo" sx={{ fontSize: 80 }} />
         <p>Loading... Shouldn't take long.</p>
+        <p>{props.text}</p>
       </header>
     </div>
   );
 }
 
-export default Loading;
+export default LoadingScreen;

@@ -1,6 +1,7 @@
 // Home.js
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
+import "../App.css";
 
 function Home({ user }) {
   const auth = getAuth();
@@ -17,7 +18,9 @@ function Home({ user }) {
 
   return (
     <div>
-      <h1>Welcome, {user.displayName || user.email}!</h1>
+      <h1 style={{ color: "white", padding: 20 }}>
+        Welcome, {user.displayName || user.email}!
+      </h1>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+//import { db } from "./firebase";
 import "./firebase";
 
 import Home from "./Pages/Home";
@@ -18,7 +19,7 @@ import Exercises from "./Pages/Exercises";
 import Measure from "./Pages/Measure";
 
 import TabBar from "./Components/TabBar";
-import Loading from "./Components/Loading";
+import LoadingScreen from "./Components/LoadingScreen";
 
 const auth = getAuth();
 
@@ -41,7 +42,7 @@ function App() {
   if (loading) {
     return (
       <div>
-        <Loading />
+        <LoadingScreen text={"Checking Authentication..."} />
       </div>
     ); // Show loading indicator while checking authentication
   }

@@ -62,7 +62,7 @@ function TabBar() {
                 <p>Start Workout</p>
               </Link>
             </li>
-            <li>
+            <li className="nav-item">
               <Link
                 to="/exercises"
                 className={`nav-links ${isActive("/exercises")}`}
@@ -72,7 +72,7 @@ function TabBar() {
                 <p>Exercises</p>
               </Link>
             </li>
-            <li>
+            <li className="nav-item">
               <Link
                 to="/measure"
                 className={`nav-links ${isActive("/measure")}`}

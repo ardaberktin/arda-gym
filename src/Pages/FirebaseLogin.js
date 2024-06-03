@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserSessionPersistence,
+} from "firebase/auth";
 import LoginPage, {
   Username,
   Password,
@@ -42,6 +47,7 @@ const FirebaseAuth = () => {
         <LoginPage onSubmit={handleLogin}>
           <Logo>🔒</Logo>
           <Title>Log in</Title>
+          <Username visible={false} />
           <Username
             label="Email:"
             name="email"
@@ -49,14 +55,38 @@ const FirebaseAuth = () => {
             onChange={handleEmailChange}
             required
             placeholder="Email"
+            keyname="email"
+            index={0}
           />
+          {/* <Username keyname="checkbox" type="checkbox" index={2}></Username> */}
+          <Password visible={false} />
           <Password
             label="Password:"
             name="password"
             value={password}
             onChange={handlePasswordChange}
             required
+            index={1}
           />
+          <Username
+            keyname="checkbox"
+            type="checkbox"
+            index={3}
+            placeholder="修改了 name 字段"
+            style={{ width: "auto" }}
+          >
+            <div
+              style={{
+                fontSize: 14,
+                display: "flex",
+                justifyContent: "left",
+                alignItems: "left",
+                flex: 1,
+              }}
+            >
+              <div>Remember Me</div>
+            </div>
+          </Username>
           <Submit onClick={handleLogin}>Log in</Submit>
           <Footer className="login-footer">
             {error && <p style={{ color: "red" }}>{error}</p>}

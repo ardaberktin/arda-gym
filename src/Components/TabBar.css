@@ -1,14 +1,17 @@
 .navbar {
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgb(55, 154, 196) 0%,
     rgb(8, 66, 101) 100%
-  );
+  ); */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   height: 80px; /* Adjust height as needed */
   display: flex;
+  width: 100%;
   justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   position: fixed; /* Fixed position */
   bottom: 0; /* Stick to the bottom */
   width: 100%; /* Occupy full width */
@@ -18,36 +21,11 @@
 
 .navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Distribute items evenly */
   align-items: center;
   height: 80px;
   max-width: 1500px;
-  max-width: 100%;
-}
-
-.navbar-logo {
-  color: #fff;
-  justify-self: start;
-  margin-left: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-
-  /* BUUUUUUUUUUU */
-  /* width: 80vw; */
-}
-
-.navbar-logo .arda-icon {
-  width: 50px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
+  width: 100%;
 }
 
 .nav-menu {
@@ -56,17 +34,19 @@
   list-style: none;
   padding: 0;
   align-items: center;
+  width: 100%; /* Ensure the menu takes full width */
 }
 
 .nav-item {
   flex: 1;
+  text-align: center; /* Center align the items */
 }
 
 .nav-links {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 10px 20px; /* Adjust padding as needed */
+  padding: 5px 5px; /* Adjust padding as needed */
   text-decoration: none;
   color: #fff;
   background-color: transparent;
@@ -115,7 +95,7 @@
     background-color: transparent;
     border: none;
     transition: background-color 0.3s ease;
-    font-size: 2vh;
+    font-size: 1.5vh;
     align-items: center;
     justify-content: center;
   }

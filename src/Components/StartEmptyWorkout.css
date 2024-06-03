@@ -1,0 +1,50 @@
+.start-empty-workout {
+  background-color: rgb(10, 41, 59);
+  background: linear-gradient(45deg, rgb(45, 52, 61) 20%, rgb(10, 41, 59) 100%);
+  color: white;
+  height: auto;
+  min-height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.start-empty-container {
+  width: 100%;
+}
+
+.start-empty-container > h1 {
+  padding: 2rem 0rem 0rem 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.start-empty-container > p {
+  padding: 1rem 0rem 0rem 1rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.empty-workout-button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-workout-button {
+  background-color: rgb(55, 154, 196);
+  color: white;
+  font-weight: bold;
+  width: 90%;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}

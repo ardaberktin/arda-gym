@@ -50,6 +50,10 @@
   margin: 3px;
 }
 
+.login-page6-inner > article > label {
+  justify-content: left;
+}
+
 @media (max-width: 600px) {
   .login-container {
     overflow-x: hidden;
