@@ -5,14 +5,20 @@ import {
   Navigate,
 } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import "./firebase";
+
 import Home from "./Pages/Home";
 import FirebaseLogin from "./Pages/FirebaseLogin";
 import FirebaseSignup from "./Pages/FirebaseSignup";
 import ResetPassword from "./Pages/ResetPassword";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import History from "./Pages/History";
+import Workout from "./Pages/Workout";
+import Exercises from "./Pages/Exercises";
+import Measure from "./Pages/Measure";
+
 import TabBar from "./Components/TabBar";
 import Loading from "./Components/Loading";
-import "./firebase";
 
 const auth = getAuth();
 
@@ -43,16 +49,23 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={user ? <Home user={user} /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/login"
-          element={user ? <Navigate to="/" /> : <FirebaseLogin />}
-        />
         <Route path="/signup" element={<FirebaseSignup />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        {user ? (
+          <>
+            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/" element={<Home user={user} />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/start-workout" element={<Workout />} />
+            <Route path="/exercises" element={<Exercises />} />
+            <Route path="/measure" element={<Measure />} />
+          </>
+        ) : (
+          <>
+            <Route path="*" element={<Navigate to="/login" />} />
+            <Route path="/login" element={<FirebaseLogin />} />
+          </>
+        )}
       </Routes>
       {user && <TabBar />}
     </Router>
