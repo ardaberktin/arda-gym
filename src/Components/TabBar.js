@@ -29,62 +29,64 @@ function TabBar() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link
-                to="/"
-                className={`nav-links ${isActive("/")}`}
-                onClick={closeMobileMenu}
-              >
-                <HomeIcon />
-                <p>Home</p>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/history"
-                className={`nav-links ${isActive("/history")}`}
-                onClick={closeMobileMenu}
-              >
-                <CalendarMonthIcon />
-                <p>History</p>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/start-workout"
-                className={`nav-links ${isActive("/start-workout")}`}
-                onClick={closeMobileMenu}
-              >
-                <AddIcon />
-                <p>Start Workout</p>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/exercises"
-                className={`nav-links ${isActive("/exercises")}`}
-                onClick={closeMobileMenu}
-              >
-                <FitnessCenterIcon />
-                <p>Exercises</p>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/measure"
-                className={`nav-links ${isActive("/measure")}`}
-                onClick={closeMobileMenu}
-              >
-                <StraightenIcon />
-                <p>Measure</p>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div className="navbar-wrapper">
+        <nav className="navbar">
+          <div className="navbar-container">
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <Link
+                  to="/"
+                  className={`nav-links ${isActive("/")}`}
+                  onClick={closeMobileMenu}
+                >
+                  <HomeIcon />
+                  <p>Home</p>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/history"
+                  className={`nav-links ${isActive("/history")}`}
+                  onClick={closeMobileMenu}
+                >
+                  <CalendarMonthIcon />
+                  <p>History</p>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/start-workout"
+                  className={`nav-links ${isActive("/start-workout")}`}
+                  onClick={closeMobileMenu}
+                >
+                  <AddIcon />
+                  <p>Start Workout</p>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/exercises"
+                  className={`nav-links ${isActive("/exercises")}`}
+                  onClick={closeMobileMenu}
+                >
+                  <FitnessCenterIcon />
+                  <p>Exercises</p>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/measure"
+                  className={`nav-links ${isActive("/measure")}`}
+                  onClick={closeMobileMenu}
+                >
+                  <StraightenIcon />
+                  <p>Measure</p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }

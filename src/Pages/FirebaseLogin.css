@@ -8,6 +8,7 @@
   justify-content: center;
   background: rgb(45, 51, 55);
   padding-bottom: 20vh;
+  padding-top: 10vh;
 }
 
 .big-title {
@@ -15,8 +16,7 @@
   font-size: 5rem;
   padding-top: 0rem;
   margin: 0;
-  padding-bottom: 1.5rem;
-  padding-top: 1rem;
+  /* padding-bottom: 1.5rem; */
   z-index: 1;
 }
 
@@ -60,5 +60,9 @@
   }
   .login-page6 {
     width: 80%;
+  }
+
+  .login-container {
+    padding-top: 0;
   }
 }
