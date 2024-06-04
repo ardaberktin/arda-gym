@@ -6,16 +6,6 @@ function Workout() {
   return (
     <>
       <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
-      <StartEmptyWorkout />
     </>
   );
 }
