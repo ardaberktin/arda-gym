@@ -95,18 +95,8 @@
   display: none;
 }
 
-/* @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .nav-links {
-    display: block;
-    text-align: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    transition: background-color 0.3s ease;
     font-size: 1.5vh;
-    align-items: center;
-    justify-content: center;
   }
-} */
+}
