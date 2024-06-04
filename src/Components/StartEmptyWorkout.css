@@ -1,14 +1,12 @@
 .start-empty-workout {
-  background-color: rgb(10, 41, 59);
-  background: linear-gradient(45deg, rgb(45, 52, 61) 20%, rgb(10, 41, 59) 100%);
   color: white;
   height: auto;
-  min-height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-bottom: 20px;
 }
 
 .start-empty-container {
@@ -49,15 +47,9 @@
   margin-top: 1rem;
   box-shadow: inset;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .empty-workout-button:active {
-  /* background-color: #3e8e41; */
-  /* box-shadow: 0 5px #666; */
   transform: translateY(4px);
-}
-
-.empty-workout-button:hover {
-  background-color: rgb(54, 140, 177);
-  /* box-shadow: 0 5px #666; */
 }
