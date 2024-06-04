@@ -21,7 +21,7 @@
 }
 
 .start-empty-container > p {
-  padding: 1rem 0rem 0rem 1rem;
+  padding: 2rem 0rem 0rem 1rem;
   color: rgb(255, 255, 255);
   font-size: 1.1rem;
   font-weight: bold;
@@ -55,4 +55,9 @@
   /* background-color: #3e8e41; */
   /* box-shadow: 0 5px #666; */
   transform: translateY(4px);
+}
+
+.empty-workout-button:hover {
+  background-color: rgb(54, 140, 177);
+  /* box-shadow: 0 5px #666; */
 }
