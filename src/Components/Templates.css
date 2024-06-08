@@ -6,8 +6,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-bottom: 20px;
-  /* border: 5px solid red; */
+  padding-bottom: 200px;
 }
 
 .templates-container {
@@ -57,4 +56,31 @@
 
 .add-template-button:active {
   transform: translateY(4px);
+}
+
+.template-folders-and-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.template-folder-name {
+  padding: 1rem 0rem 1rem 1rem;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.template-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vw;
+  justify-content: space-between;
+  align-items: center;
 }

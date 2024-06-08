@@ -6,8 +6,8 @@
 
 .navbar {
   background: rgba(105, 104, 104, 0.196); /* Semi-transparent background */
-  backdrop-filter: blur(15px); /* Blur effect */
-  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   height: 90px; /* Adjust height as needed */
   display: flex;
   width: 100%;
